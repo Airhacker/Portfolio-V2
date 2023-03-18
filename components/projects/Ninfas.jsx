@@ -1,4 +1,3 @@
-import Link from "next/Link";
 import { HiArrowSmRight } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
