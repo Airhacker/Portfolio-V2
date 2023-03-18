@@ -1,5 +1,3 @@
-import Link from "next/Link";
-import { IoIosArrowDown } from "react-icons/io";
 import AnimatedText from "./AnimatedText";
 import { motion } from "framer-motion";
 
