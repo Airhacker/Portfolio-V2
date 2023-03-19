@@ -12,9 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-11/12 m-auto xl:w-10/12">
+      <main>
         <Header />
         <Projects />
+        <Footer />
       </main>
     </>
   );

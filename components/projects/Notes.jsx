@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowSmRight } from "react-icons/hi";
+import {
+  SiNextdotjs,
+  SiFirebase,
+  SiTailwindcss,
+  SiGithub,
+} from "react-icons/si";
 
 const Notes = () => {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState("");
 
   const parent = {
     hidden: { scale: 1 },
@@ -25,21 +31,24 @@ const Notes = () => {
         <div className="py-4">
           <a
             className="text-2xl font-semibold md:text-4xl xl:text-6xl "
-            href="https://ninfasmissouricity.com/"
+            href="https://super-chat-phi.vercel.app/"
             target={"_blank"}
           >
             Notes App
           </a>
         </div>
-        <div className="flex gap-4 text-xs">
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
-            NEXT JS
+        <div className="flex gap-2 text-xs">
+          <span className="flex content-center justify-center gap-2 px-2 py-1 rounded-xl bg-primaryText text-bgColor">
+            <SiNextdotjs className="inline h-full" />
+            Next.js
           </span>
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
-            REACT
+          <span className="flex content-center justify-center gap-2 px-2 py-1 bg-firebaseBg rounded-xl text-bgColor">
+            <SiFirebase className="inline h-full" />
+            Firebase
           </span>
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
-            CSS
+          <span className="flex content-center justify-center gap-2 px-2 py-1 bg-tailwindBg rounded-xl text-bgColor">
+            <SiTailwindcss className="inline h-full" />
+            Tailwind
           </span>
         </div>
         <div className="hidden py-4 md:block">
@@ -47,17 +56,17 @@ const Notes = () => {
         </div>
         <div className="content-center justify-center hidden py-4 text-center w-fit xl:flex xl:gap-4 xl:content-center xl:justify-center">
           <motion.a
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            onMouseEnter={() => setHover("site")}
+            onMouseLeave={() => setHover("")}
             className="flex content-center justify-center gap-2 px-4 py-2 border border-primaryText rounded-xl"
-            href="https://ninfasmissouricity.com/"
+            href="https://super-chat-phi.vercel.app/"
             target={"_blank"}
             variants={parent}
             initial="hidden"
             whileHover="show"
           >
             Visit Site
-            {hover && (
+            {hover === "site" && (
               <AnimatePresence>
                 <motion.div
                   initial={{ scale: 0, x: -50 }}
@@ -71,24 +80,24 @@ const Notes = () => {
           </motion.a>
 
           <motion.a
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            onMouseEnter={() => setHover("github")}
+            onMouseLeave={() => setHover("")}
             className="flex content-center justify-center gap-2 px-4 py-2 border border-primaryText rounded-xl"
-            href="https://ninfasmissouricity.com/"
+            href="https://github.com/Airhacker/SuperChat"
             target={"_blank"}
             variants={parent}
             initial="hidden"
             whileHover="show"
           >
-            Visit Site
-            {hover && (
+            GitHub
+            {hover === "github" && (
               <AnimatePresence>
                 <motion.div
                   initial={{ scale: 0, x: -50 }}
                   animate={{ scale: 1, x: 0 }}
                   exit={{ scale: 0, x: -50 }}
                 >
-                  <HiArrowSmRight className="h-full text-base" />
+                  <SiGithub className="h-full text-base text-githubBg " />
                 </motion.div>
               </AnimatePresence>
             )}
@@ -98,15 +107,16 @@ const Notes = () => {
 
       {/* div for video */}
       <div className="w-full py-4 xl:flex-1">
-        <a href="https://ninfasmissouricity.com/" target={"_blank"}>
-          <video
+        <a href="https://super-chat-phi.vercel.app/" target={"_blank"}>
+          <motion.video
+            whileHover={{ scale: 1.025 }}
             autoPlay
             muted
             loop
             className="w-full border-primaryText rounded-xl shadow-3xl"
-            src={require("../../public/video/NinfasVideo.webm")}
+            src={require("../../public/video/NotesVideo.webm")}
             type="video/webm"
-          ></video>
+          ></motion.video>
         </a>
       </div>
     </div>

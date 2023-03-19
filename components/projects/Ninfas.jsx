@@ -1,6 +1,7 @@
 import { HiArrowSmRight } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { SiCss3, SiNextdotjs, SiReact } from "react-icons/si";
 
 const Ninfas = () => {
   const [hover, setHover] = useState(false);
@@ -31,14 +32,17 @@ const Ninfas = () => {
             Ninfa&apos;s Missouri City
           </a>
         </div>
-        <div className="flex gap-4 text-xs">
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
-            NEXT JS
+        <div className="flex gap-2 text-xs">
+          <span className="flex content-center justify-center gap-2 px-2 py-1 rounded-xl bg-primaryText text-bgColor">
+            <SiNextdotjs className="inline h-full" />
+            Next.js
           </span>
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
-            REACT
+          <span className="flex content-center justify-center gap-2 px-2 py-1 bg-reactBg rounded-xl text-bgColor">
+            <SiReact className="inline h-full" />
+            React
           </span>
-          <span className="px-2 py-1 rounded-xl bg-primaryText text-bgColor">
+          <span className="flex content-center justify-center gap-2 px-2 py-1 bg-cssBg rounded-xl text-bgColor">
+            <SiCss3 className="inline h-full" />
             CSS
           </span>
         </div>
@@ -75,14 +79,15 @@ const Ninfas = () => {
       {/* div for video */}
       <div className="w-full py-4 xl:flex-1">
         <a href="https://ninfasmissouricity.com/" target={"_blank"}>
-          <video
+          <motion.video
+            whileHover={{ scale: 1.025 }}
             autoPlay
             muted
             loop
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/NinfasVideo.webm")}
             type="video/webm"
-          ></video>
+          ></motion.video>
         </a>
       </div>
     </div>
