@@ -10,7 +10,9 @@ const Header = () => {
           <h3 className="py-2 text-base font-semibold">
             Frontend Web Developer
           </h3>
-          <span className="py-2 underline">umairahmed.dev@gmail.com</span>
+          <a href="mailto:umairahmed.dev@gmail.com" className="py-2 underline">
+            umairahmed.dev@gmail.com
+          </a>
           <span className="py-2">{"(832)-459-4221"}</span>
         </div>
         <div className="flex flex-col content-center flex-1 md:text-right justify-top">
@@ -24,7 +26,7 @@ const Header = () => {
                 color: "black",
                 textDecoration: "underline",
               }}
-              href=""
+              href="/files/resume.pdf"
             >
               Resume
             </motion.a>
@@ -33,7 +35,8 @@ const Header = () => {
                 color: "black",
                 textDecoration: "underline",
               }}
-              href=""
+              href="https://www.linkedin.com/in/umair-ahmed-b7875a148"
+              target={"_blank"}
             >
               LinkedIn
             </motion.a>
@@ -42,7 +45,8 @@ const Header = () => {
                 color: "black",
                 textDecoration: "underline",
               }}
-              href=""
+              href="https://github.com/Airhacker"
+              target={"_blank"}
             >
               Github
             </motion.a>
