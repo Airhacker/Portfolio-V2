@@ -47,7 +47,12 @@ const Todo = () => {
           </span>
         </div>
         <div className="hidden py-4 md:block">
-          <p>Website made for the restaurant Mama Ninfa&apos;s</p>
+          <p>
+            Todo List website, made with Next.js, Tailwind CSS, and Framer
+            Motion, offers seamless organization and task management with smooth
+            animations and a user-friendly interface, and stores the notes
+            locally for added convenience.
+          </p>
         </div>
         <div className="content-center justify-center hidden py-4 text-center w-fit xl:flex xl:gap-4 xl:content-center xl:justify-center">
           <motion.a

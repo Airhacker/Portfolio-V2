@@ -47,7 +47,12 @@ const Ninfas = () => {
           </span>
         </div>
         <div className="hidden py-4 md:block">
-          <p>Website made for the restaurant Mama Ninfa&apos;s</p>
+          <p>
+            Ninfa&apos;s Missouri City website is easy to use, looks great, and
+            was made with Next.js and Framer Motion. You can explore the menu,
+            learn about the restaurant&apos;s history, and make reservations,
+            all while enjoying smooth animations and cool visuals.
+          </p>
         </div>
         <div className="content-center justify-center hidden py-4 text-center w-fit xl:flex xl:gap-4 xl:content-center xl:justify-center">
           <motion.a

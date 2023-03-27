@@ -52,7 +52,12 @@ const Notes = () => {
           </span>
         </div>
         <div className="hidden py-4 md:block">
-          <p>Website made for the restaurant Mama Ninfa&apos;s</p>
+          <p>
+            Notes website built with Next.js, Firebase, and Tailwind CSS,
+            allowing users to sign in with their Google account for added
+            convenience. It offers robust note-taking features and real-time
+            syncing for seamless organization.
+          </p>
         </div>
         <div className="content-center justify-center hidden py-4 text-center w-fit xl:flex xl:gap-4 xl:content-center xl:justify-center">
           <motion.a
