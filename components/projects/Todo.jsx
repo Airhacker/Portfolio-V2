@@ -112,7 +112,8 @@ const Todo = () => {
             whileHover={{ scale: 1.025 }}
             muted
             loop
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+            autoPlay
+            poster=".../../photos/todoScreenshot.png"
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/TodoVideo.webm")}
             type="video/webm"
