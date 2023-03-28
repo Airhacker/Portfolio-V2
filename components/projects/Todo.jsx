@@ -110,20 +110,13 @@ const Todo = () => {
         <a href="https://todo-list-5iop.vercel.app/" target={"_blank"}>
           <motion.video
             whileHover={{ scale: 1.025 }}
-            autoPlay
             muted
             loop
             poster="../../public/photos/todoScreenshot.png"
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/TodoVideo.webm")}
             type="video/webm"
-          >
-            <img
-              className="w-full border-primaryText rounded-xl shadow-3xl"
-              src="../../public/photos/todoScreenshot.png"
-              alt=""
-            />
-          </motion.video>
+          ></motion.video>
         </a>
       </div>
     </div>
