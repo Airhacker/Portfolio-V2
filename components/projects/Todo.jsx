@@ -117,7 +117,13 @@ const Todo = () => {
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/TodoVideo.webm")}
             type="video/webm"
-          ></motion.video>
+          >
+            <img
+              className="w-full border-primaryText rounded-xl shadow-3xl"
+              src="../../public/photos/todoScreenshot.png"
+              alt=""
+            />
+          </motion.video>
         </a>
       </div>
     </div>
