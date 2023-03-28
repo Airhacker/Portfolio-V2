@@ -89,6 +89,7 @@ const Ninfas = () => {
             autoPlay
             muted
             loop
+            poster="../../public/photos/ninfasScreenshot.png"
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/NinfasVideo.webm")}
             type="video/webm"

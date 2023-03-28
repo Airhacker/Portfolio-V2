@@ -113,6 +113,7 @@ const Todo = () => {
             autoPlay
             muted
             loop
+            poster="../../public/photos/todoScreenshot.png"
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/TodoVideo.webm")}
             type="video/webm"

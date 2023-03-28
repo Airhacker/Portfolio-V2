@@ -118,6 +118,7 @@ const Notes = () => {
             autoPlay
             muted
             loop
+            poster="../../public/photos/notesScreenshot.png"
             className="w-full border-primaryText rounded-xl shadow-3xl"
             src={require("../../public/video/NotesVideo.webm")}
             type="video/webm"
