@@ -1,57 +1,42 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedText = () => {
-  const firstNameText = "Umair";
-  const lastNameText = "Ahmed";
+  const firstName = ["U", "m", "a", "i", "r"];
+  const lastName = ["A", "h", "m", "e", "d"];
 
-  const firstNameWords = firstNameText.split("");
-  const lastNameWords = lastNameText.split("");
-
-  // Variants for Container of words.
   const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.075,
-      },
-    },
+    hidden: { opacity: 1 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
-  // Variants for each word.
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      y: "200%",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.01 },
-    },
-    visible: {
-      opacity: 1,
-      y: "0%",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.01 },
-    },
+  const items = {
+    hidden: { opacity: 0, y: "100%" },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      className="py-12 text-6xl font-bold text-primaryDarkText md:text-8xl xl:text-9xl"
-    >
-      {firstNameWords.map((word, index) => (
-        <motion.span variants={item} key={word + index}>
-          {word}
-        </motion.span>
-      ))}
-      <br />
-      {lastNameWords.map((word, index) => (
-        <span className="overflow-hidden" key={word + index}>
-          <motion.span variants={item}>{word}</motion.span>
-        </span>
-      ))}
-    </motion.div>
+    <div className="py-12 text-6xl font-bold text-primaryDarkText md:text-8xl xl:text-9xl">
+      <AnimatePresence>
+        <motion.div
+          className="inline-block"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          {firstName.map((letter, index) => (
+            <motion.p variants={items} key={index} className="inline-block">
+              {letter}
+            </motion.p>
+          ))}
+          <br />
+          {lastName.map((letter, index) => (
+            <motion.p variants={items} key={index} className="inline-block">
+              {letter}
+            </motion.p>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 export default AnimatedText;

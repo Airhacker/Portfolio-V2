@@ -27,6 +27,7 @@ const Header = () => {
                 textDecoration: "underline",
               }}
               href="/files/resume.pdf"
+              target={"_blank"}
             >
               Resume
             </motion.a>
