@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <section className="w-screen py-8 bg-primaryText">
-      <div className="w-11/12 m-auto">
+      <div className="w-11/12 m-auto xl:w-10/12">
         <h2 className="py-4 text-2xl md:text-4xl xl:text-6xl">Get in Touch</h2>
         <a href="mailto:umairahmed.dev@gmail.com" className="pt-4 underline">
           umairahmed.dev@gmail.com
